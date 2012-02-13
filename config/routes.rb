@@ -1,4 +1,15 @@
 EdibleSystems::Application.routes.draw do
+  root :to => "pages#home"
+  
+  resources :pages do
+    member do
+      get :home
+      get :about
+      get :portfolio
+      get :contact
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

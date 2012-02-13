@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title
+      Edible Systems
+    = csrf_meta_tags
+    = render 'layouts/includes'
+  %body
+    = render 'layouts/header'
+    %section.content
+      = yield
+    = render 'layouts/footer'
+    = debug(params) if Rails.env.development? 
