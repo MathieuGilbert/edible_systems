@@ -1,5 +1,16 @@
-%header
-  Home | About | Portfolio | Contact
+%img.logo{:src => '/assets/es_logo.png'}
 %h1
-  Edible Systems!
-%image.logo{:src => 'assets/es_logo.png'}
+  Edible Systems
+%h2
+  Bespoke Software Solutions
+.nofloat
+%ul.nav
+  %li
+    = link_to("Home", :root, html_options = {:title => "Home"} )
+  %li
+    = link_to("About", :about_page, html_options = {:title => "About"} )
+  %li
+    = link_to("Portfolio", :portfolio_page, html_options = {:title => "Portfolio"} )
+  %li
+    = link_to("Contact", :contact_page, html_options = {:title => "Contact"} )
+.nofloat

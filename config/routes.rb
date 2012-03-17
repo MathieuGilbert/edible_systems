@@ -2,7 +2,7 @@ EdibleSystems::Application.routes.draw do
   root :to => "pages#home"
   
   resources :pages do
-    member do
+    collection do
       get :home
       get :about
       get :portfolio
