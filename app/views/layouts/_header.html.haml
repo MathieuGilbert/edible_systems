@@ -5,12 +5,12 @@
   Bespoke Software Solutions
 .nofloat
 %ul.nav
-  %li
+  %li{ :class => current_page?(:root) ? 'active' : '' }
     = link_to("Home", :root, html_options = {:title => "Home"} )
-  %li
+  %li{ :class => current_page?(:about_page) ? 'active' : '' }
     = link_to("About", :about_page, html_options = {:title => "About"} )
-  %li
+  %li{ :class => current_page?(:portfolio_page) ? 'active' : '' }
     = link_to("Portfolio", :portfolio_page, html_options = {:title => "Portfolio"} )
-  %li
+  %li{ :class => current_page?(:contact_page) ? 'active' : '' }
     = link_to("Contact", :contact_page, html_options = {:title => "Contact"} )
 .nofloat

@@ -1,2 +1,9 @@
-.nav
-  Home | About | Portfolio | Contact
+%ul.nav
+  %li{ :class => current_page?(:root) ? 'active' : '' }
+    = link_to("Home", :root, html_options = {:title => "Home"} )
+  %li{ :class => current_page?(:about_page) ? 'active' : '' }
+    = link_to("About", :about_page, html_options = {:title => "About"} )
+  %li{ :class => current_page?(:portfolio_page) ? 'active' : '' }
+    = link_to("Portfolio", :portfolio_page, html_options = {:title => "Portfolio"} )
+  %li{ :class => current_page?(:contact_page) ? 'active' : '' }
+    = link_to("Contact", :contact_page, html_options = {:title => "Contact"} )

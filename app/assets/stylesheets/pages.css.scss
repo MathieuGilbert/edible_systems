@@ -12,17 +12,22 @@ $page-width: 900px;
   border-bottom-right-radius: $rad;
 }
 
-p {
-  background-color: #335599;
+@mixin fader($property, $time) {
+  -moz-transition: $property $time;
+  -webkit-transition: $property $time;
+  -o-transition: $property $time;
+  -ms-transition: $property $time;
+  transition: $property $time;
 }
 
+
 footer, header {
-  background-color: #7755dd;
+  /*background-color: #7755dd;*/
 }
 
 body {
   font-family: Verdana;
-  background-color: #9999ff;
+  background-image: url('cross_scratches.png');
   width: $page-width;
   @include center;
 }
@@ -30,6 +35,8 @@ body {
 .nofloat {
   clear: both;
 }
+
+
 
 header {
 
@@ -51,7 +58,7 @@ header {
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
 
     li {
       display: list-item;
@@ -59,25 +66,71 @@ header {
       float: left;
       @include rounded-corners(10px);
       border: 1px solid black;
-      padding: 10px;
+      padding: 0;
       margin: 10px;
-      width: 6em;
+      width: 120px;
+      height: 30px;
+      @include fader(background-color, 0.3s);
 
-    }
-    li:hover {
-      background-color: #996633;
-      cursor: pointer;
-      cursor: finger;
-    }
+      &:hover {
+        background-color: #8bb7c7;
+        cursor: pointer;
+        cursor: finger;
+      }
 
+      &.active {
+        background-color: #8bb7c7;
+        font-weight: bold;
+      }
+
+      a {
+        display: block;
+        padding: 6px 0;
+        text-decoration: none;
+        color: black;
+      }
+    }
   }
 }
 
+
+
 footer {
   text-align: center;
+  margin: 20px 0 10px 0;
 
   .nav {
     display: inline-block;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+      padding: 0;
+      margin: 0 10px 5px 10px;
+      width: 5em;
+
+
+      &.active a {
+        border-bottom: 2px solid black;
+        font-weight: bold;
+      }
+
+      a {
+        text-decoration: none;
+        border-bottom: 1px dotted black;
+        color: black;
+
+        &:hover {
+
+          border-bottom: 2px solid black;
+        }
+      }
+    }
   }
 }
 
@@ -86,6 +139,26 @@ footer {
   margin: 50px 70px;
   float: left;
   min-height: 400px;
+
+  ul {
+    list-style-type: none;
+    padding-left: 30px;
+
+    lh {
+      font-weight: bold;
+      line-height: 2em;
+
+    }
+    li {
+      padding-left: 20px;
+      line-height: 1.5em;
+
+      &:before {
+        font-size: 0.6em;
+        content: "->";
+      }
+    }
+  }
 }
 
 .top-left {
@@ -121,5 +194,5 @@ dl {
       text-align: right;
     }
   }
-
 }
+
