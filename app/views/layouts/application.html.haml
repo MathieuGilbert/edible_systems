@@ -8,8 +8,16 @@
   %body
     %header
       = render 'layouts/header'
-    %section.content
+
+    .top-left
+
+    .content
       = yield
+
+    .nofloat
+    .bottom-right
+    .nofloat
+
     %footer
       = render 'layouts/footer'
     = debug(params) if Rails.env.development? 

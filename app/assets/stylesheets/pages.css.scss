@@ -21,6 +21,7 @@ footer, header {
 }
 
 body {
+  font-family: Verdana;
   background-color: #9999ff;
   width: $page-width;
   @include center;
@@ -78,4 +79,47 @@ footer {
   .nav {
     display: inline-block;
   }
+}
+
+.content {
+  width: auto;
+  margin: 50px 70px;
+  float: left;
+  min-height: 400px;
+}
+
+.top-left {
+  background-image: url('TL.png');
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-bottom: -200px;
+}
+
+.bottom-right {
+  background-image: url('BR.png');
+  width: 200px;
+  height: 200px;
+  float: right;
+  margin-top: -200px;
+}
+
+dl {
+  margin: 10px 50px;
+
+  dt {
+    font-weight: bold;
+    padding-bottom: 8px;
+  }
+
+  dd {
+    font-style: italic;
+    font-size: 0.9em;
+
+    .credit {
+      font-size: 0.9em;
+      text-align: right;
+    }
+  }
+
 }
