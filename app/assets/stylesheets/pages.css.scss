@@ -1,4 +1,5 @@
 $page-width: 900px;
+$nav-button-color: rgb(147, 179, 241);
 
 @mixin center {
   margin-right: auto;
@@ -21,9 +22,6 @@ $page-width: 900px;
 }
 
 
-footer, header {
-  /*background-color: #7755dd;*/
-}
 
 body {
   font-family: Verdana;
@@ -70,16 +68,16 @@ header {
       margin: 10px;
       width: 120px;
       height: 30px;
-      @include fader(background-color, 0.3s);
+      @include fader(background-color, 0.4s);
 
       &:hover {
-        background-color: #8bb7c7;
+        background-color: $nav-button-color;
         cursor: pointer;
         cursor: finger;
       }
 
       &.active {
-        background-color: #8bb7c7;
+        background-color: $nav-button-color;
         font-weight: bold;
       }
 
