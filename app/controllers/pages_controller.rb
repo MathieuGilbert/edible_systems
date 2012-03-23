@@ -1,17 +1,16 @@
 class PagesController < ApplicationController
-  def home
-    @current_page = 'home'
-  end
+  before_filter :nav_items
 
-  def portfolio
-    @current_page = 'portfolio'
+  def home
   end
 
   def about
-    @current_page = 'about'
   end
 
   def contact
-    @current_page = 'contact'
+  end
+
+  def nav_items
+    @nav_items = [[:root, "Home"], [:about_page, "About"], [:contact_page, "Contact"]]
   end
 end

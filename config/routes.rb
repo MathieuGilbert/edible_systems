@@ -5,7 +5,6 @@ EdibleSystems::Application.routes.draw do
     collection do
       get :home
       get :about
-      get :portfolio
       get :contact
     end
   end

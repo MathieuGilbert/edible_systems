@@ -72,8 +72,7 @@ header {
 
       &:hover {
         background-color: $nav-button-color;
-        cursor: pointer;
-        cursor: finger;
+
       }
 
       &.active {
@@ -86,6 +85,14 @@ header {
         padding: 6px 0;
         text-decoration: none;
         color: black;
+        cursor: pointer;
+        cursor: finger;
+      }
+
+      span {
+        display: block;
+        padding: 6px 0;
+        cursor: default;
       }
     }
   }
@@ -112,21 +119,19 @@ footer {
       margin: 0 10px 5px 10px;
       width: 5em;
 
-
-      &.active a {
-        border-bottom: 2px solid black;
-        font-weight: bold;
-      }
-
       a {
         text-decoration: none;
         border-bottom: 1px dotted black;
         color: black;
 
         &:hover {
-
           border-bottom: 2px solid black;
         }
+      }
+
+      span {
+        border-bottom: 2px solid black;
+        font-weight: bold;
       }
     }
   }

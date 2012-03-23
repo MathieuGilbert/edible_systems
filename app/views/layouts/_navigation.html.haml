@@ -1,0 +1,6 @@
+%ul.nav
+  - @nav_items.each do |item|
+    %li{ :class => current_page?(item[0]) ? 'active' : '' }
+      = link_to_unless_current(item[1], item[0], { :title => item[1] }) do
+        %span
+          = item[1]
