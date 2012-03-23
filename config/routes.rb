@@ -9,6 +9,8 @@ EdibleSystems::Application.routes.draw do
     end
   end
 
+  post 'pages/make_contact'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

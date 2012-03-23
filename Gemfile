@@ -4,6 +4,7 @@ gem 'rails', '3.2.0'
 gem 'heroku'
 gem 'jquery-rails'
 gem 'haml'
+gem 'negative-captcha', :git => 'git://github.com/stefants/negative-captcha.git'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
