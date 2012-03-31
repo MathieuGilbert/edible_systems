@@ -6,10 +6,9 @@ EdibleSystems::Application.routes.draw do
       get :home
       get :about
       get :contact
+      post :make_contact
     end
   end
-
-  post 'pages/make_contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -25,6 +25,12 @@ $nav-button-color: rgb(147, 179, 241);
 
 body {
   font-family: Verdana;
+
+  input[type='text'], textarea {
+    font-family: Verdana;
+    font-size: 1em;
+  }
+
   background-image: url('cross_scratches.png');
   width: $page-width;
   @include center;
@@ -178,9 +184,12 @@ footer {
 
   .contact {
 
-    label {
-
-
+    .error {
+      color: #EF2343;
+      font-weight: bold;
+      font-size: 1.5em;
+      line-height: 20px;
+      text-align: center;
     }
 
     input {

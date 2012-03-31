@@ -2,6 +2,8 @@
   Contact
 = form_tag(:pages_make_contact, :class => 'contact') do
   = raw negative_captcha(@captcha)
+  %p.error
+    = flash[:error]
 
   .left-side
     = negative_label_tag(@captcha, :name, 'Name:')
