@@ -1,17 +1,22 @@
 %h1
   Contact
-= form_tag(:pages_make_contact) do
+= form_tag(:pages_make_contact, :class => 'contact') do
   = raw negative_captcha(@captcha)
 
-  %ul
-    %li
-      = negative_label_tag(@captcha, :name, 'Name:')
-      = negative_text_field_tag @captcha, :name
-    %li
-      = negative_label_tag(@captcha, :email, 'Email:')
-      = negative_text_field_tag @captcha, :email
-    %li
-      = negative_label_tag(@captcha, :message, 'Message:')
-      = negative_text_field_tag @captcha, :message
-    %li
-      = submit_tag "Send"
+  .left-side
+    = negative_label_tag(@captcha, :name, 'Name:')
+  .right-side
+    = negative_text_field_tag @captcha, :name
+  .nofloat
+  .left-side
+    = negative_label_tag(@captcha, :email, 'Email:')
+  .right-side
+    = negative_text_field_tag @captcha, :email
+  .nofloat
+  .left-side
+    = negative_label_tag(@captcha, :message, 'Message:')
+  .right-side
+    = negative_text_area_tag @captcha, :message
+  .nofloat
+  .right-side
+    = submit_tag "Send"
