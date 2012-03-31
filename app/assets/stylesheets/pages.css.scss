@@ -183,6 +183,7 @@ footer {
   }
 
   .contact {
+    width: 410px;
 
     .error {
       color: #EF2343;
@@ -192,34 +193,37 @@ footer {
       text-align: center;
     }
 
-    input {
-      width: 200px;
-    }
+    .form-row {
+      width: 410px;
+      margin: 10px 0;
+      clear: both;
+      min-height: 30px;
 
-    input[type='submit'] {
-      width: 100px;
-    }
+      input {
+        width: 200px;
 
-    textarea {
-      width: 300px;
-      height: 100px;
-    }
+        float: left;
+        display: inline;
+      }
 
-    .right-side {
-      float: left;
-    }
+      label {
+        width: 100px;
+        display: inline;
+        float: left;
+      }
 
-    .right-side:last-child {
-      float: right;
-    }
+      input[type='submit'] {
+        width: 80px;
+        float: right;
+      }
 
-    .left-side {
-      float: left;
-      display: inline;
-      width: 100px;
+      textarea {
+        width: 300px;
+        height: 100px;
+        margin: 0;
+      }
     }
   }
-
 }
 
 .top-left {

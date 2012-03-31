@@ -5,20 +5,14 @@
   %p.error
     = flash[:error]
 
-  .left-side
+  .form-row
     = negative_label_tag(@captcha, :name, 'Name:')
-  .right-side
     = negative_text_field_tag @captcha, :name
-  .nofloat
-  .left-side
+  .form-row
     = negative_label_tag(@captcha, :email, 'Email:')
-  .right-side
     = negative_text_field_tag @captcha, :email
-  .nofloat
-  .left-side
+  .form-row
     = negative_label_tag(@captcha, :message, 'Message:')
-  .right-side
     = negative_text_area_tag @captcha, :message
-  .nofloat
-  .right-side
+  .form-row
     = submit_tag "Send"
